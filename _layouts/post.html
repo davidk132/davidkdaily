@@ -1,0 +1,54 @@
+---
+layout: default
+---
+
+<!--
+For photos, use the following attributes in "image-style" in the post meta:
+"top": Photo is vertically cropped and centered, and placed responsively above the copy 
+"bottom": Photo is vertically cropped and centered, and placed responsively below the copy 
+COMING SOON: "floated": Photo is floated inside the first paragraph
+COMING SOON: "parallaxy": nuff said
+
+All images are clickable to view the original image
+
+-->
+
+<div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+  </header>
+
+  <article class="post-content">
+    
+    {% if page.image-style == 'top' %}
+    <div class="ImgContainer">
+      <img src="/images/{{ page.image }}" alt="page.image-title">
+    </div>
+    {% endif %}
+    
+    {{ content }}
+    
+       
+    {% if page.image-style == 'bottom' %}
+    <div class="outside">
+      <a href="/images/{{ page.image }}">
+        <img src="/images/{{ page.image }}" alt="page.image-title">
+      </a>
+    </div>
+    {% endif %}
+ 
+    {% if page.image-title %}
+      <div class="caption"><small>{{ page.image-title }}</small></div>
+    {% endif %}
+    
+  </article>
+  
+  {% if page.image %}
+    {% if page.image-style == 'parallaxy' %}<h1>YES THERE IS AN PARALLAXY IMAGE</h1>
+    {% capture full_image_name %}"background-image: url('/images/dcbuildings.jpg')"{% endcapture %}<h2>{{ full_image_name }}</h2>
+     <div style={{ full_image_name }} class="parallaxy"></div>
+    {% endif %}
+  {% endif %}
+</div>

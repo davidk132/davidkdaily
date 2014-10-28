@@ -1,0 +1,119 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+@import url(http://fonts.googleapis.com/css?family=PT+Sans);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+
+// Our variables
+$base-font-family: "Open Sans", Helvetica, Arial, sans-serif;
+$base-font-size:   18px;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+// DKD variables
+$header-font-family: "PT Sans", Helvetica, Arial, sans-serif;
+// $golden: 1.618;
+// $header-font-size: $base-font-size;
+
+$dkPrimaryColor: #FEFAEF; // khaki-ish, originally #FCEAB5, #FDF0CB
+$dkSecondaryColor: #00608F; // bluish, originally #2979A0, #216180
+$dkAccentColor: #DC1A00; // reddish
+$coolLinkColor: #00608F; // blue
+
+
+// DK new header heights
+
+/* standard header sizes, fyi
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.17em; }
+h4 { font-size: 1em; }
+h5 { font-size: .83em; }
+h6 { font-size: .75em; }
+*/
+
+$hh1: 2.5em;
+$hh2: 2em;
+$hh3: 1.5em;
+$hh4: 1em;
+$hh5: .75em;
+$hh6: .67em;
+
+$footer-1: 40%; // originally 35%
+$footer-2: 40%; // originally 20%
+$footer-3: 20%; // originally 45%
+
+$spacing-unit:     30px;
+
+$text-color:       $coolLinkColor; // originally #111
+$background-color: $dkPrimaryColor; // originally #fdfdfd
+$brand-color:      $coolLinkColor; // originally #2A7AE2
+
+$grey-color:       $dkSecondaryColor; // originally #828282
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+
+
+// Using media queries with like this:
+// @include media-query($palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "layout",
+        "syntax-highlighting"
+;
+
+
+// Make links more readable in the posts by always underlining them
+.post-content a {
+  text-decoration: underline;
+}
+
+span.username {
+  font-size: $hh5;
+}
+
+div.outside {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 400px;
+  img {
+    width: 100%;
+    position: absolute;
+    // left: -50%; This is not needed because the width is already 100%
+    top: -50%;
+  }
+}
+
+div.parallaxy {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% auto;
+  max-width: 100%;
+  height: 400px;
+}
+
+div.caption {
+  text-align: center;
+}

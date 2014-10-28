@@ -1,0 +1,17 @@
+# Site settings
+title: David Kissinger
+email: david@davidkissinger.com
+description: > # this means to ignore newlines until "baseurl:"
+  web design external affairs pr advocacy
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://davidkissinger.com" # the base hostname & protocol for your site
+twitter_username: david_kissinger
+github_username:  davidk132
+linkedin_username: davidgkissinger
+facebook_username: davidgkissinger
+
+# Build settings
+exclude: ["/images", "/portfolio", "Gemfile"]
+markdown: kramdown
+sass:
+    style: :compressed
