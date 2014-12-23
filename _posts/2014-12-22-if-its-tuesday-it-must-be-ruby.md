@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "If it's Tuesday, it must be Ruby"
-date:   2014-10-13
+date:   2014-12-22
 category: Web design
 image: ""
 image-title: ""
