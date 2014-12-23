@@ -19,7 +19,7 @@ This is the trouble not just for politicians and candidates but also for their w
 
 This also exposes the risks for candidates and designers. Brushed up on your PHP skills? Great, except that many candidates are grabbing onto Nation Builder as the next coolest thing. And it is cool. Written in Ruby on Rails, it puts to rest the motion that Rails cannot scale.
 
-Want to do a Wordpress site? Sure, that'll work. Just don' use the default templates with the 2003-era three-column layout. You might as well drive a Pinto. Doing a Drupal site? If you're not a third-party candidate running for President who won't win anyway, then you should think very carefully before going down that route. At a minimum, wait for Drupal 8 to emerge.
+Want to do a Wordpress site? Sure, that'll work. Just don't use the default templates with the 2003-era three-column layout. You might as well drive a Pinto. Doing a Drupal site? If you're not a third-party candidate running for President who won't win anyway, then you should think very carefully before going down that route. At a minimum, wait for Drupal 8 to emerge.
 
 Coming soon: Will candidates and politicans track voters and constituents (and contributors) using newer and hipper frameworks like Meteor or the [Mean Stack](http://mean.io/)? I hope so! [Angular](https://angularjs.org/)? [Backbone](http://backbonejs.org/
 )? I hope they're not yet out of date.
